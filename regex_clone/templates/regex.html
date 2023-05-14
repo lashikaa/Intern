@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RegEx Clone</title>
+</head>
+
+<body style="background-color:rgb(222, 109, 218);">
+    <style> div {text-align: center;} </style>
+<div>
+    <h1>Regular Expression <i>101</i>x</h1>
+    <br><br>
+
+    <form action = "" method="post">
+        
+        <label><b><h3> Regex : </h3></b></label>
+        <textarea name="reg_exp" placeholder="Enter Regex"></textarea>
+        <br><br>
+        <label><b><h3> String : </h3></b></label>
+        <textarea name="txt" placeholder="Enter String"></textarea>
+        <br><br>
+        <button> Submit </button>
+    
+    </form>
+
+    
+    {% if count>0 %}
+    <h2> Total Matches = {{count}} </h2>
+    <h2> Matches: </h2>
+    {% for match in matches %}
+        {{match}}<br>
+    {% endfor %}
+    {% elif count == -1 %}
+    {% else %}
+    <h2> No Match Found! Try Again! </h2>
+    {% endif %}
+</div>
+    
+</body>
+</html>
