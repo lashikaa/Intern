@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container"></div>
+    <h1>Homepage</h1>
+    <form action="/" method="post">
+        <div class="form-group"></div>
+            <label for="url">Enter URL to shorten:</label>
+            <input type="text" id="url" name="url" required>
+        </div>
+            <button type="submit">Shorten</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Shortened URLs</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Original URL</th>
+      <th>Shortened URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for shortner in shortners %}
+    <tr>
+      <td>{{ shortner.link }}</td>
+      <td><strong><a href="{{ shortner.shortened_url }}" target="_blank">{{ shortner.shortened_url }}</a></strong></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+
+
+
+
